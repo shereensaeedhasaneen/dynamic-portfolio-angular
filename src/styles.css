@@ -2,3 +2,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --main-color: #0ef; /* اللون الفسفوري */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: white;
+  font-family: 'Poppins', sans-serif; /* يفضل تضيفي الخط ده من Google Fonts */
+}
+
+/* شكل الـ Hexagon المحترف */
+.hexagon-shape {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+}
+
+.hexagon-shape:hover {
+  box-shadow: 0 0 50px var(--main-color);
+}
